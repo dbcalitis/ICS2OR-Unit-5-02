@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Javascript">
+    <meta name="keywords" content="Javascript, HTML, Crossover">
+    <meta name="author" content="Daria Bernice Calitis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integer Teller</title>
+  </head>
+  <body>
+    <h1>Integer Teller</h1>
+    <p>It tells you if your number is a negative or a positive</p>
+    <input type="number" id="inputBox" placeholder="Enter a Number here">
+    <p id="teller"></p>
+    <button id="activate">Enter</button>
+    <script>
+      document.getElementById("activate").addEventListener("click", detect);
+      function detect(number) {
+        number = document.getElementById("inputBox").value;
+        if (number > 0) {
+          document.getElementById("teller").textContent = number + " is a postive number.";
+        }
+        else if (number < 0) {
+          document.getElementById("teller").textContent = number + " is a negative number.";
+        }
+        else {
+          document.getElementById("teller").textContent = "0 is not a positive nor a negative number. It is called the origin.";
+        }
+      }
+    </script>
+  </body>
+</html>

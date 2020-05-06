@@ -11,13 +11,13 @@
   <body>
     <h1>Integer Teller</h1>
     <p>It tells you if your number is a negative or a positive</p>
-    <input type="number" id="inputBox" placeholder="Enter a Number here">
+    <input type="number" id="inputbox" placeholder="Enter a Number here">
     <p id="teller"></p>
     <button id="activate">Enter</button>
     <script>
       document.getElementById("activate").addEventListener("click", detect);
       function detect(number) {
-        number = document.getElementById("inputBox").value;
+        number = document.getElementById("inputbox").value;
         if (number > 0) {
           document.getElementById("teller").textContent = number + " is a postive number.";
         }
